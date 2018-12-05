@@ -20,7 +20,7 @@
     "webpack-manifest-plugin": "^2.0.4"
   },
   "scripts": {
-    "start": "NODE_ENV=development webpack-dev-server --config ./.webpack/webpack.config.dev.js --profile --colors"
+    "start": "webpack-dev-server --config ./.webpack/webpack.config.dev.js --profile --colors"
   },
   "devDependencies": {
     "@types/node": "10.3.4",

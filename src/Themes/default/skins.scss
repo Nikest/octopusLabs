@@ -1,0 +1,34 @@
+:global {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+  }
+
+  body {
+    background: var(--color-bg);
+    background-repeat: repeat;
+    min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+
+    &.theme-default {
+      --bg-main-01: #35D4F1;
+      --bg-main-02: #21CDED;
+      --bg-box: #57D9F1;
+      --bg-button: #fff;
+
+      --border-main: #79DEF2;
+      --border-decor: var(--bg-main-01);
+      --border-error: rgba(255, 46, 135, 0.31);
+
+      --color-main: #fff;
+      --color-mark: #FF2E87;
+
+      --color-error: rgba(255, 46, 135, 0.31);
+    }
+  }
+
+}

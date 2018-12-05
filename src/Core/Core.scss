@@ -1,0 +1,11 @@
+.container {
+  min-height: 100vh;
+  @include flex(column, center, stretch);
+  color: var(--color-main);
+}
+
+.content {
+  height: 100%;
+  background: var(--bg-main-02);
+  flex: 1 1 auto;
+}

@@ -1,0 +1,34 @@
+.container {
+  background: var(--bg-box);
+  text-transform: none;
+  font-style: normal;
+  padding: $standart-padding;
+  grid-column: 1;
+
+  &:nth-child(2n) {
+    grid-column: 2;
+  }
+}
+
+
+.wrap {
+  @include gridWrap($big-size);
+  @include grid;
+  padding-top: $standart-padding;
+
+  @include middleScreen {
+    width: 100%;
+    display: block;
+    padding-left: $standart-padding;
+    padding-right: $standart-padding;
+
+    > * {
+      margin-bottom: $standart-padding;
+    }
+  }
+
+  @include smallScreen {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

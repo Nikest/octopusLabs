@@ -1,0 +1,18 @@
+.container {
+  height: 130px;
+  @include flex(column, center, center);
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid var(--border-decor);
+  padding: 10px;
+  height: 110px;
+}
+
+.title  {
+  font-size: 38px;
+}

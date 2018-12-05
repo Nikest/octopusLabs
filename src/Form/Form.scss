@@ -1,0 +1,94 @@
+.label {
+  border: 2px solid var(--bg-box);
+  width: 100%;
+  display: inline-block;
+
+  &.error {
+    border-color: var(--border-error);
+  }
+
+  .input {
+    border: none;
+    background: transparent;
+    color: var(--color-main);
+    line-height: $line;
+    padding: $small-padding $standart-padding;
+    width: 100%;
+    font-size: inherit;
+    font-family: inherit;
+    outline: none;
+
+    &::placeholder {
+      color: var(--color-main);
+      font-family: inherit;
+      font-size: inherit;
+    }
+  }
+}
+
+.select {
+  position: relative;
+  cursor: pointer;
+  padding-right: 40px !important;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 7px solid var(--color-main);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    top: 32px;
+    right: 13px;
+    display: block;
+  }
+}
+
+.options {
+  position: absolute;
+  top: 100%;
+  left: -2px;
+  right: -2px;
+  z-index: 1;
+  transition: $transition;
+  overflow: hidden;
+  max-height: 0;
+  height: auto;
+  border: 2px solid transparent;
+
+  &.open {
+    max-height: 200px;
+    overflow: auto;
+    border: 2px solid var(--bg-box);
+
+    &.top {
+      top: -200px;
+    }
+  }
+
+  .option {
+    background: var(--bg-main-02);
+    padding: 5px 25px;
+    transition: $transition;
+
+    &:hover {
+      background: var(--bg-box);
+    }
+  }
+}
+
+.button {
+  background: var(--bg-button);
+  color: var(--color-mark);
+  line-height: $line;
+  padding: 10px $standart-padding;
+  border: none;
+  border-radius: $line;
+  font-size: inherit;
+  outline: none;
+  cursor: pointer;
+  display: block;
+  width: 350px;
+  margin: auto;
+}

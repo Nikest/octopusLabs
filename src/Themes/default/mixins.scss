@@ -1,0 +1,30 @@
+@mixin grid {
+  display: grid;
+  grid-gap: 20px;
+  grid-auto-columns: calc(50% - 10px);
+}
+
+@mixin flex($direction, $content, $items) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $content;
+  align-items: $items;
+}
+
+@mixin gridWrap($width) {
+  padding: 0;
+  width: $width;
+  margin: auto;
+}
+
+@mixin middleScreen() {
+  @media screen and(max-width: $big-size + $standart-padding) {
+    @content;
+  }
+}
+
+@mixin smallScreen() {
+  @media screen and(max-width: $small-size + $standart-padding) {
+    @content;
+  }
+}

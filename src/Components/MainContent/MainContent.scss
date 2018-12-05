@@ -1,0 +1,8 @@
+.container {
+  @include flex(column, flex-start, center);
+  padding-bottom: $standart-padding;
+
+  @include smallScreen {
+    padding: 0 $small-padding;
+  }
+}
